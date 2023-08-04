@@ -1,3 +1,15 @@
+const galleryImage = document.querySelectorAll(".gallery-img");
+galleryImage.forEach((img, i) => {
+  img.dataset.aos = "fade-down";
+  img.dataset.aosDelay = i * 80;
+  img.dataset.aosDuration = 1000;
+});
+
+AOS.init({
+  offset: 80,
+});
+
+
 const scriptURL =
         "https://script.google.com/macros/s/AKfycbyQmWA4c3pb5S-MGJq3twxpyM91eBHczt9INfcoGYl9YELuA5vUTjbSlJdQfYqEcSkN/exec";
       const form = document.forms["submit-to-google-sheet"];
@@ -26,3 +38,4 @@ const scriptURL =
             console.error("Error!", error.message);
           });
       });
+
