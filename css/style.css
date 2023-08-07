@@ -20,3 +20,114 @@ section {
 #gallery .row > * {
     padding: 0;
 }
+
+/* 3D Style */
+.tigad-box {
+    position: relative;
+    border-radius: 10px;
+    height: 500px;
+    background-image: url(../img/thumbnail/3.webp);
+    background-size: cover;
+    transform-style: preserve-3d;
+}
+.tigad-box-dua {
+    position: relative;
+    border-radius: 10px;
+    height: 500px;
+    background-image: url(../img/thumbnail/4.png);
+    background-size: cover;
+    transform-style: preserve-3d;
+}
+.tigad-box-tiga {
+    position: relative;
+    border-radius: 10px;
+    height: 500px;
+    background-image: url(../img/thumbnail/5.png);
+    background-size: cover;
+    transform-style: preserve-3d;
+}
+
+
+.tigad-box::before {
+    content: 'MY';
+    position: absolute;
+    color: #fff;
+    font-size: 6em;
+    font-weight: bold;
+    font-style: italic;
+    top: -100px;
+    opacity: 0;
+    left: 20%;
+    transform: translate3d(-50%, 0, 35px);
+    transition: 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.tigad-box:hover::before {
+    opacity: .3;
+    top: 10px;
+}
+
+.tigad-box::after {
+    content: 'DESIGN';
+    position: absolute;
+    color: #fff;
+    font-size: 6em;
+    font-weight: bold;
+    font-style: italic;
+    top: 450px;
+    opacity: 0;
+    left: 50%;
+    transform: translate3d(-50%, 0, 55px);
+    transition: 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.tigad-box:hover::after {
+    opacity: .3;
+    top: 330px;
+}
+
+.tigad-name {
+    position: absolute;
+    color: #fff;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    opacity: 0;
+    transform: translate3d(0,0,60px);
+    transition: 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.tigad-box:hover .tigad-name {
+    top: 10px;
+    opacity: 1;
+}
+
+.tigad-detail-btn {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate3d(-50%, 0, 60px);
+    opacity: 0;
+    transition: 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.tigad-box:hover .tigad-detail-btn {
+    opacity: .8;
+    bottom: 15px;
+}
+
+.sulfitry-img {
+    position: absolute;
+    top: 45%;
+    left: 54%;
+    transform: translate3d(-50%, -50%, 50px);
+    transition: 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+    opacity: 0;
+}
+
+.tigad-box:hover .sulfitry-img {
+    top: 25%;
+    transform: translate3d(-50%, -50%, 50px) scale(1.2);
+    opacity: 1;
+}
